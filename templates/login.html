@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Login</title>
+    <link rel="stylesheet" href="../static/styles/base.css">
+    <link rel="stylesheet" href="../static/styles/login.css">
+
+  {% include 'includes/bootstrap.html' %}
+
+</head>
+
+<body>
+  
+    {% include 'includes/header.html' %}
+
+    <form action="" method="POST">
+        <div>
+            <h1>Login</h1>
+        </div>
+
+        <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input aria-label="enter-user-name" type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input aria-label="enter-password" type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input aria-label="checkbox" type="checkbox" checked="checked" name="remember"> Remember me</label>
+        </div>
+
+        <div class="container" id="forgot-pw-div">
+            <h6 class="psw">Forgot <a href="#">password?</a></h6>
+        </div>
+
+        <div id="no-account-div">
+            <h4>Don't have an account?</h4>
+            <a href="./registration">Sign up</a>
+        </div>
+
+    </form>
+
+    {% include 'includes/footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Hub</title>
+    <link rel="stylesheet" href="../static/styles/base.css">
+    <link rel="stylesheet" href="../static/styles/profile-hub.css">
+
+    {% include 'includes/bootstrap.html' %}
+
+</head>
+
+<body>
+
+    {% include 'includes/header.html' %}
+
+    <main>
+        <div id="profile-container">
+            <div id="profile-image-container">
+                <img src="../static/images/pexels-lala-da-14036568.jpg" alt="profile picture">
+                <!-- Pexels - Lala Da - young-woman-taking-photos-against-an-alpine-lake - accessed on 28/10/2023 -->
+            </div>
+            <div id="profile-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt nulla facilis necessitatibus natus
+                    recusandae vitae inventore dolorem. Debitis asperiores ex minima excepturi ratione eum atque ut
+                    impedit error iusto?</p>
+            </div>
+            <div id="contact-adds-container">
+                <p>contact adds?</p>
+            </div>
+        </div>
+
+        <section id="profile-hub-options-container">
+            <div class="profile-hub-option-boxes" id="about-container">
+                <h2><a href="">About</a></h2>
+            </div>
+            <div class="profile-hub-option-boxes" id="workout-programs-container">
+                <h2><a href="">Workout Programs</a></h2>
+            </div>
+            <div class="profile-hub-option-boxes" id="following-container">
+                <h2><a href="">Following</a></h2>
+            </div>
+        </section>
+
+    </main>
+  
+    {% include 'includes/footer.html' %}
+
+</body>
+
+</html>

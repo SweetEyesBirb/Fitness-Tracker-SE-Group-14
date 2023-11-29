@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Live Classes</title>
+    <link rel="stylesheet" href="../static/styles/base.css">
+    <link rel="stylesheet" href="../static/styles/live-classes.css">
+    <script src="../static/script/live-classes.js" defer></script>
+
+  {% include 'includes/bootstrap.html' %}
+
+</head>
+
+<body>
+
+    {% include 'includes/header.html' %}
+
+    <div id="live-classes-main">
+        <div class="live-classes-categories">
+            <div class="live-classes-category" id="live-class-category-one">
+                <ul id="category-one-list"></ul>
+            </div>
+            <div class="live-classes-category" id="live-class-category-two">
+                <ul id="category-two-list"></ul>
+            </div>
+            <div class="live-classes-category" id="live-class-category-three">
+                <ul id="category-three-list"></ul>
+            </div>
+        </div>
+    </div>
+    
+  
+    {% include 'includes/footer.html' %}
+
+</body>
+
+</html>

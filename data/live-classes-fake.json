@@ -1,0 +1,93 @@
+{
+    "classes": [
+      {
+        "name": "Cardio Blast",
+        "image": "cardio-blast-tn.png"
+      },
+      {
+        "name": "High-Intensity Interval Training (HIIT)",
+        "image": "HIIT-tn.png"
+      },
+      {
+        "name": "Strength & Conditioning",
+        "image": "Strength-and-Condition-tn.png"
+      },
+      {
+        "name": "Yoga Fusion",
+        "image": "Yoga-Fusion-tn.png"
+      },
+      {
+        "name": "Pilates Power",
+        "image": "pilates-power-tn.jpg"
+      },
+      {
+        "name": "CrossFit Challenge",
+        "image": "crossfit-challenge-tn.jpg"
+      },
+      {
+        "name": "Kickboxing Cardio",
+        "image": "kickboxing-cardio-tn.jpg"
+      },
+      {
+        "name": "Bootcamp Burn",
+        "image": "bootcamp-burn-tn.jpg"
+      },
+      {
+        "name": "Zumba Mania",
+        "image": "zumba-mania.jpeg"
+      },
+      {
+        "name": "Spinning Sweat",
+        "image": "spinning-sweat-tn.jpg"
+      },
+      {
+        "name": "Core Crusher",
+        "image": "core-crusher-tn.jpg"
+      },
+      {
+        "name": "Barre Sculpt",
+        "image": "barre-sculpt-tn.jpg"
+      },
+      {
+        "name": "Bodyweight Bliss",
+        "image": "bodyweight-bliss-tn.png"
+      },
+      {
+        "name": "TRX Total Body",
+        "image": "trx-total-body-tn.jpg"
+      },
+      {
+        "name": "Functional Fitness",
+        "image": "functional-fitness-tn.png"
+      },
+      {
+        "name": "Dance Fit Party",
+        "image": "dance-fitness-tn.png"
+      },
+      {
+        "name": "Kettlebell Kicker",
+        "image": "kettlebell-kicker-tn.jpg"
+      },
+      {
+        "name": "Flexibility Flow",
+        "image": "flexability-flow-tn.jpg"
+      },
+      {
+        "name": "Circuit Training Madness",
+        "image": "circuit-training-madness-tn.png"
+      },
+      {
+        "name": "Power Yoga",
+        "image": "power-yoga-tn.jpg"
+      },
+      {
+        "name": "Tabata Torcher",
+        "image": "tabata-torcher.jpg"
+      },
+      {
+        "name": "Sculpt & Tone",
+        "image": "sculpt-and-tone-tn.jpg"
+      }
+    ]
+  }
+  

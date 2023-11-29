@@ -1,13 +1,30 @@
-
-
 /* variables */
 :root {
-    --background-color: #0d0021;
+    --jet: #3A3238;
+    --gray: #545863;
     --text-color: aliceblue;
     --bg-light: aliceblue;
-    --bg-color-layer-1:#2c2534;
-}
+    --bg-dark:#2c2534;
+    --cyan: #01BAEF;
+    --aquamarine: #7AE7C7;
+    --primary-yellow: #FFFF1C;
+    --citrine: #DDD92A;
+    --raspberry: #D81159;
+    --quinarcidone-magenta: #8F2D56;
+    --pink-lavander: #E7BBE3;
+    --melon: #EDAF97;
+    --border-light: #ccc;
+    /* Colours pack 1 */
+    --background-dark: #2c2534;
+    --background-dark-light-accent:#362e3d;
+    --base-dark-cyan: #006474;
+    --base-light-turquiose: #61c3ac;
+    --base-turquiose: #94CDC6;
+    --accent-green: #6ab37c;
+    --text-light: aliceblue;
+    --text-dark: #3A3238;
 
+}
 
 /* reset */
 * {
@@ -15,14 +32,14 @@
     padding: 0;
     box-sizing: border-box;
     position: relative;
-    text-align: center;
+    text-align: center; 
     font-family: Arial, sans-serif;
 }
-
 
 /* general */
 body {
     background-color: var(--bg-light);
+    min-height: 100vh;
 }
 
 main {
@@ -36,4 +53,85 @@ a {
 
 li {
     list-style-type: none;
+}
+
+
+/* partial components like header, footer etc */
+/* header where cog icon and hamburger menu reside */
+header {
+    background-image: linear-gradient(to left, var(--base-dark-cyan), var(--base-light-turquiose));
+    display: flex;
+    justify-content: space-between;
+}
+
+#cog-container {
+    display: flex;
+    align-items: center; /* aligns item on the equator */
+    height: 80px;
+}
+
+.bi-gear {
+    font-size: 44px;
+    margin: 0 20px;
+}
+
+.bi:hover {
+    cursor: pointer;
+}
+
+#hamburger-container {
+    display: flex;
+    align-items: center; /* aligns item on the equator */
+}
+
+.bi-list {
+    margin: 0 20px;
+    font-size: 44px;
+}
+
+/* dropdown styles and functionalities (they are used on the hamburger menu icon) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--aquamarine);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+    border-radius: 5px;
+    z-index: 1;
+    right: 10px;
+}
+
+#hamburger-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: var(--jet);
+    font-size: 1.15rem;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light);
+}
+
+/* prevents the dropdown from disappearing when moving away from the hamburger menu */
+#hamburger-container:hover .dropdown-content {
+    display: block;
+}
+
+/* footer */
+footer {
+  color: var(--text-color);
+  min-height: 100px;
+  background-color: var(--jet);
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+margin: 0 auto;
 }

@@ -1,0 +1,32 @@
+#news-main {
+    height: auto;
+    padding: 6vh 0;
+    background-color: var(--background-dark);
+    display: flex;
+}
+
+#news-main-headings{
+    width: 68%;
+    height: 80vh;
+    margin: 0 0 0 2%;
+    background-color: var(--background-dark-light-accent);
+    overflow-y: scroll;
+}
+
+#news-main-adverts{
+    width: 28%;
+    background-color: var(--base-turquiose)
+}
+
+.news-headline-container{
+    width: 98%;
+    height: auto;
+    margin: 1%;
+    background-color: var(--base-dark-cyan);
+    display: flex;
+}
+
+.headline-image {
+    padding: 10vh;
+    background-color: white;
+}

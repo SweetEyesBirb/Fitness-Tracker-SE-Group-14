@@ -3,16 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Hub</title>
+    <link rel="stylesheet" href="../static/styles/base.css">
+    <link rel="stylesheet" href="../static/styles/index.css">
 
-    <title>Index</title>
+    {% include 'includes/bootstrap.html' %}
 
-    <link rel="stylesheet" href="static/styles/index.css">
 </head>
 <body>
+  
+    {% include 'includes/header.html' %}
 
-<ul>
-  <li>Hi</li>
-  <li>Hello</li>
-</ul>
+  <div id="hub-page-main-banner">
+    <div id="banner-image">
+      <!-- <img src="" alt=""> -->
+    </div>
+    <div id="banner-overlay-text">
+      <p>Something about the features of the website and how it can be used</p>
+    </div>
+  </div>
+
+  <section id="options-container">
+    <a class="hub-option" href="{{ url_for('profile_hub_urlfor') }}">
+        <h3>
+            <!--<img> -->
+            <p>Profile Hub</p>
+        </h3>
+    </a>
+    <a class="hub-option" href="{{ url_for('live_classes_urlfor') }}">
+        <h3>
+            <!--<img> -->
+            <p>Live Classes</p>
+        </h3>
+    </a>
+    <a class="hub-option" href="{{ url_for('news_urlfor') }}">
+        <h3>
+            <!--<img> -->
+            <p>News</p>
+        </h3>
+    </a>
+    <a class="hub-option" href="{{ url_for('achievements_urlfor') }}">
+        <h3>
+            <!--<img> -->
+            <p>Achievements</p>
+        </h3>
+    </a>
+    <a class="hub-option" href="{{ url_for('exercise_urlfor') }}">
+        <h3>
+            <!--<img> -->
+          <p>Exercise</p>
+        </h3>
+    </a>
+    <a class="hub-option" href="{{ url_for('diary_and_tracker_urlfor') }}">
+        <h3>
+          <!--<img> -->
+          <p>Diary and Exercise Tracker</p>
+        </h3>
+    </a>
+    <a class="hub-option" href="{{ url_for('dietary_urlfor') }}">
+        <h3>
+          <!--<img> -->
+          <p>Dietary</p>
+        </h3>
+    </a>
+  </section>
+
+    {% include 'includes/footer.html' %}
 </body>
 </html>

@@ -1,0 +1,23 @@
+.large-box {
+    width: 70%;
+    max-width: 6000px;
+    height: 140vh;
+    max-height: 6000px;
+    
+    
+    background-color: lightgray;
+    float: left;
+    box-sizing: border-box;
+}
+
+.small-box {
+    width: 30%;
+    max-width: 6000px;
+    height: 70vh;
+    max-height: 6000px;
+     
+    background-color: lightblue;
+    float: right;
+    
+    box-sizing: border-box;
+}
