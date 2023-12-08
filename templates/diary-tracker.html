@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Tracker Diary and Tracker</title>
+    <title>Fitness Diary and Exercise Tracker</title>
     <link rel="stylesheet" href="../static/styles/base.css">
     <link rel="stylesheet" href="../static/styles/diary-tracker.css">
 
-  <!-- <script defer src="../static/script/diary-tracker.js"></script> -->
-  <script defer src="../static/script/diary-and-tracker-test.js"></script>
+  <script defer src="../static/script/diary-tracker.js"></script>
 
   {% include 'includes/bootstrap.html' %}
 
@@ -24,6 +23,7 @@
         <div class="diary-exercise-boxes" id="diary-container">
             <h2>Diary</h2>
           <div id="diary-entries">
+            <!-- data from data/diary-entries.json will be displayed here -->
           </div>
         </div>
         
@@ -38,41 +38,65 @@
         </div>
       </section>
 
+      <!-- exercise form -->
       <form method="post" class="forms" id="exercise-form"> <!-- removed action="" as it was causing issues with the page route -->
-
+        <h2>Add New Exercise Entry</h2>
         <div class="form-group">
           <label for="exercise-name">Exercise Name</label>
-          <input type="text" name="exercise-name" class="form-control" id="exercise-name" placeholder="Enter Exercise Name">
+          <input type="text" name="exercise-name" class="form-control" id="exercise-name" placeholder="Enter Exercise Name" required>
         </div>
         <div class="form-group">
           <label for="sets">Sets</label>
-          <input type="number" name="sets" class="form-control" id="sets" placeholder="Enter Sets">
+          <input type="number" name="sets" class="form-control" id="sets" placeholder="Enter Sets" min="1" required>
         </div>
         <div class="form-group">
           <label for="repetitions">Repetitions</label>
-          <input type="number" name="repetitions" class="form-control" id="repetitions" placeholder="Enter Repetitions">
+          <input type="number" name="repetitions" class="form-control" id="repetitions" placeholder="Enter Repetitions" min="1" required>
         </div>
         <div class="form-group">
           <label for="weight">Weight</label>
-          <input type="number" name="weight" class="form-control" id="weight" placeholder="Enter Weight">
+          <input type="number" name="weight" class="form-control" id="weight" placeholder="Enter Weight" min="1">
         </div>
         <div class="form-group">
           <label for="date">Date</label>
-          <input type="date" name="date" class="form-control" id="date">
+          <input type="date" name="date" class="form-control" id="date" required>
         </div>
         <div class="form-group">
           <label for="time">Time</label>
-          <input type="time" name="time" class="form-control" id="time"/>
-        <button type="submit" class="btn btn-submit">Submit</button>
+          <input type="time" name="time" class="form-control" id="time" required>        
       </div>
+        <div class="form-group">
+          <label for="duration">Duration</label>
+          <input type="number" name="sets" class="form-control" id="duration" placeholder="Enter Duration" min="1" required>
+        </div>
+        
+        <button type="submit" class="btn-submit">Submit</button>
         
       </form>
 
+      <!-- diary form -->
       <form method="post" class="forms" id="diary-form">
+
+        <h2>Add New Diary Entry</h2>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" name="date" class="form-control" id="diary-date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" name="time" class="form-control" id="diary-time" required>
+        </div>
+
+        <div class="form-group">
+          <label for="calories">Calories</label>
+          <input type="number" name="calories" class="form-control" id="diary-calories" placeholder="Enter Calories Burnt Today" min="1" required>
+        </div>
+        
           <div class="form-group">
               <label for="diary-entry">Enter an entry for your diary in the area below</label>
-              <textarea type="text" name="diary-entry" class="form-control" id="diary-entry" placeholder="Create a diary entry"></textarea>
-              <button type="submit" class="btn btn-submit">Submit</button>
+              <textarea type="text" name="diary-entry" class="form-control" id="diary-entry" placeholder="Create a diary entry" required></textarea>
+              <button type="submit" class="btn-submit">Submit</button>
           </div>
       </form>
       

@@ -1,0 +1,328 @@
+{
+  "exerciseData": [
+      {
+        "code": "h45s",
+        "name": "High-Intensity Strength Training",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 45,
+        "description": "An intense strength training session designed for maximum impact.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "m45s",
+        "name": "Moderate-Intensity Strength Training",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 45,
+        "description": "A balanced strength training routine focusing on strength and endurance.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "l45s",
+        "name": "Low-Intensity Strength Training",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 45,
+        "description": "A light strength training workout suitable for all fitness levels.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "h30s",
+        "name": "High-Intensity Short Strength Session",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 30,
+        "description": "A quick and intense strength training session for time-conscious individuals.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "m30s",
+        "name": "Moderate-Intensity Short Strength Session",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 30,
+        "description": "A focused strength training session that fits into a shorter timeframe.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "l30s",
+        "name": "Low-Intensity Short Strength Session",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 30,
+        "description": "A short and gentle strength training routine suitable for beginners.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "h10s",
+        "name": "High-Intensity Quick Strength Workout",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 10,
+        "description": "A brief but intense strength training workout for a powerful impact.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "m10s",
+        "name": "Moderate-Intensity Quick Strength Workout",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 10,
+        "description": "A quick and effective strength training routine for busy schedules.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "l10s",
+        "name": "Low-Intensity Quick Strength Workout",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 10,
+        "description": "A short and easy strength training session suitable for a quick fitness boost.",
+        "exercise": "Strength"
+      },
+      {
+        "code": "h45b",
+        "name": "Challenging Balance Training",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 45,
+        "description": "An intense balance training session to challenge and improve stability.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "m45b",
+        "name": "Moderate Balance Training",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 45,
+        "description": "A balanced and moderate intensity session focused on improving balance and coordination.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "l45b",
+        "name": "Gentle Balance Training",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 45,
+        "description": "A gentle and low-intensity balance workout suitable for all fitness levels.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "h30b",
+        "name": "Quick High-Intensity Balance Exercises",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 30,
+        "description": "A shorter but intense balance training routine for a quick challenge.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "m30b",
+        "name": "Quick Moderate-Intensity Balance Exercises",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 30,
+        "description": "A quick and effective balance workout at a moderate intensity.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "l30b",
+        "name": "Quick Low-Intensity Balance Exercises",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 30,
+        "description": "A short and easy balance training session suitable for a quick fitness boost.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "h10b",
+        "name": "High-Intensity Short Balance Workout",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 10,
+        "description": "A brief but intense balance workout for a powerful stability challenge.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "m10b",
+        "name": "Moderate-Intensity Short Balance Workout",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 10,
+        "description": "A quick and effective balance training routine at a moderate intensity.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "l10b",
+        "name": "Low-Intensity Short Balance Workout",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 10,
+        "description": "A short and easy balance training session suitable for a quick stability boost.",
+        "exercise": "Balance"
+      },
+      {
+        "code": "h45st",
+        "name": "Deep Stretching Session",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 45,
+        "description": "A high-intensity stretching session focusing on deep stretches for flexibility.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "m45st",
+        "name": "Moderate Stretching Routine",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 45,
+        "description": "A moderate-intensity stretching routine to improve flexibility and release tension.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "l45st",
+        "name": "Gentle Stretching Flow",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 45,
+        "description": "A gentle and low-intensity stretching flow suitable for relaxation and flexibility.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "h30st",
+        "name": "Quick High-Intensity Stretching",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 30,
+        "description": "A shorter but intense stretching session for a quick flexibility boost.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "m30st",
+        "name": "Quick Moderate-Intensity Stretching",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 30,
+        "description": "A quick and effective stretching routine at a moderate intensity.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "l30st",
+        "name": "Quick Low-Intensity Stretching",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 30,
+        "description": "A short and easy stretching session suitable for a quick relaxation break.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "h10st",
+        "name": "High-Intensity Short Stretching Session",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 10,
+        "description": "A brief but intense stretching session for a powerful flexibility challenge.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "m10st",
+        "name": "Moderate-Intensity Short Stretching Session",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 10,
+        "description": "A quick and effective stretching routine at a moderate intensity.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "l10st",
+        "name": "Low-Intensity Short Stretching Session",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 10,
+        "description": "A short and easy stretching session suitable for a quick flexibility boost.",
+        "exercise": "Stretching"
+      },
+      {
+        "code": "h45a",
+        "name": "High-Intensity Aerobic Workout",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 45,
+        "description": "An intense aerobic workout designed to elevate your heart rate and boost endurance.",
+        "exercise": "Aerobic"
+      },
+      {
+        "code": "m45a",
+        "name": "Moderate-Intensity Aerobic Session",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 45,
+        "description": "A moderate-intensity aerobic session focusing on cardiovascular fitness and stamina.",
+        "exercise": "Aerobic"
+      },
+      {
+        "code": "l45a",
+        "name": "Low-Intensity Aerobic Exercise",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 45,
+        "description": "A gentle and low-intensity aerobic exercise suitable for all fitness levels.",
+        "exercise": "Aerobic"
+      },
+      {
+        "code": "h30a",
+        "name": "Quick High-Intensity Aerobic Blast",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 30,
+        "description": "A shorter but intense aerobic workout for a quick burst of energy and calorie burn.",
+        "exercise": "Aerobic"
+      },
+      {
+        "code": "m30a",
+        "name": "Quick Moderate-Intensity Aerobic Session",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 30,
+        "description": "A quick and effective aerobic session at a moderate intensity for time-conscious individuals.",
+        "exercise": "Aerobic"
+      },
+      {
+        "code": "l30a",
+        "name": "Quick Low-Intensity Aerobic Routine",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 30,
+        "description": "A short and easy aerobic routine suitable for a quick fitness boost.",
+        "exercise": "Aerobic"
+      },
+      {
+        "code": "h10a",
+        "name": "High-Intensity Short Aerobic Workout",
+        "image": "exercise-image.png",
+        "intensity": "High",
+        "duration": 10,
+        "description": "A brief but intense aerobic workout for a powerful cardio challenge.",
+        "exercise": "Aerobic"
+      },
+      {
+        "code": "m10a",
+        "name": "Moderate-Intensity Short Aerobic Workout",
+        "image": "exercise-image.png",
+        "intensity": "Medium",
+        "duration": 10,
+        "description": "A quick and effective aerobic routine at a moderate intensity.",
+        "exercise": "Aerobic"
+      },
+      {
+        "code": "l10a",
+        "name": "Low-Intensity Short Aerobic Routine",
+        "image": "exercise-image.png",
+        "intensity": "Low",
+        "duration": 10,
+        "description": "A short and easy aerobic routine suitable for a quick fitness boost.",
+        "exercise": "Aerobic"
+      }
+  ]
+}

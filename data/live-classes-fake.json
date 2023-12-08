@@ -1,93 +1,114 @@
 {
-    "classes": [
-      {
-        "name": "Cardio Blast",
-        "image": "cardio-blast-tn.png"
-      },
-      {
-        "name": "High-Intensity Interval Training (HIIT)",
-        "image": "HIIT-tn.png"
-      },
-      {
-        "name": "Strength & Conditioning",
-        "image": "Strength-and-Condition-tn.png"
-      },
-      {
-        "name": "Yoga Fusion",
-        "image": "Yoga-Fusion-tn.png"
-      },
-      {
-        "name": "Pilates Power",
-        "image": "pilates-power-tn.jpg"
-      },
-      {
-        "name": "CrossFit Challenge",
-        "image": "crossfit-challenge-tn.jpg"
-      },
-      {
-        "name": "Kickboxing Cardio",
-        "image": "kickboxing-cardio-tn.jpg"
-      },
-      {
-        "name": "Bootcamp Burn",
-        "image": "bootcamp-burn-tn.jpg"
-      },
-      {
-        "name": "Zumba Mania",
-        "image": "zumba-mania.jpeg"
-      },
-      {
-        "name": "Spinning Sweat",
-        "image": "spinning-sweat-tn.jpg"
-      },
-      {
-        "name": "Core Crusher",
-        "image": "core-crusher-tn.jpg"
-      },
-      {
-        "name": "Barre Sculpt",
-        "image": "barre-sculpt-tn.jpg"
-      },
-      {
-        "name": "Bodyweight Bliss",
-        "image": "bodyweight-bliss-tn.png"
-      },
-      {
-        "name": "TRX Total Body",
-        "image": "trx-total-body-tn.jpg"
-      },
-      {
-        "name": "Functional Fitness",
-        "image": "functional-fitness-tn.png"
-      },
-      {
-        "name": "Dance Fit Party",
-        "image": "dance-fitness-tn.png"
-      },
-      {
-        "name": "Kettlebell Kicker",
-        "image": "kettlebell-kicker-tn.jpg"
-      },
-      {
-        "name": "Flexibility Flow",
-        "image": "flexability-flow-tn.jpg"
-      },
-      {
-        "name": "Circuit Training Madness",
-        "image": "circuit-training-madness-tn.png"
-      },
-      {
-        "name": "Power Yoga",
-        "image": "power-yoga-tn.jpg"
-      },
-      {
-        "name": "Tabata Torcher",
-        "image": "tabata-torcher.jpg"
-      },
-      {
-        "name": "Sculpt & Tone",
-        "image": "sculpt-and-tone-tn.jpg"
-      }
-    ]
-  }
-  
+  "classes": [
+    {
+      "code": "cb14",
+      "name": "Cardio Blast",
+      "image": "cardio-blast-tn.png"
+    },
+    {
+      "code": "HIIT12",
+      "name": "High-Intensity Interval Training (HIIT)",
+      "image": "HIIT-tn.png"
+    },
+    {
+      "code": "SC34",
+      "name": "Strength & Conditioning",
+      "image": "Strength-and-Condition-tn.png"
+    },
+    {
+      "code": "YF754",
+      "name": "Yoga Fusion",
+      "image": "Yoga-Fusion-tn.png"
+    },
+    {
+      "code": "PiP034",
+      "name": "Pilates Power",
+      "image": "pilates-power-tn.jpg"
+    },
+    {
+      "code": "CC453",
+      "name": "CrossFit Challenge",
+      "image": "crossfit-challenge-tn.jpg"
+    },
+    {
+      "code": "KC394",
+      "name": "Kickboxing Cardio",
+      "image": "kickboxing-cardio-tn.jpg"
+    },
+    {
+      "code": "BB3465",
+      "name": "Bootcamp Burn",
+      "image": "bootcamp-burn-tn.jpg"
+    },
+    {
+      "code": "ZM3049",
+      "name": "Zumba Mania",
+      "image": "zumba-mania.jpeg"
+    },
+    {
+      "code": "SpS3490",
+      "name": "Spinning Sweat",
+      "image": "spinning-sweat-tn.jpg"
+    },
+    {
+      "code": "C3094",
+      "name": "Core Crusher",
+      "image": "core-crusher-tn.jpg"
+    },
+    {
+      "code": "BaS459",
+      "name": "Barre Sculpt",
+      "image": "barre-sculpt-tn.jpg"
+    },
+    {
+      "code": "BB368",
+      "name": "Bodyweight Bliss",
+      "image": "bodyweight-bliss-tn.png"
+    },
+    {
+      "code": "TRXTB435",
+      "name": "TRX Total Body",
+      "image": "trx-total-body-tn.jpg"
+    },
+    {
+      "code": "FF4598",
+      "name": "Functional Fitness",
+      "image": "functional-fitness-tn.png"
+    },
+    {
+      "code": "DFP456",
+      "name": "Dance Fit Party",
+      "image": "dance-fitness-tn.png"
+    },
+    {
+      "code": "KK4583",
+      "name": "Kettlebell Kicker",
+      "image": "kettlebell-kicker-tn.jpg"
+    },
+    {
+      "code": "FF39234",
+      "name": "Flexibility Flow",
+      "image": "flexability-flow-tn.jpg"
+    },
+    {
+      "code": "CTM4597",
+      "name": "Circuit Training Madness",
+      "image": "circuit-training-madness-tn.png"
+    },
+    {
+      "code": "PY7983",
+      "name": "Power Yoga",
+      "image": "power-yoga-tn.jpg"
+    },
+    {
+      "code": "TT345",
+      "name": "Tabata Torcher",
+      "image": "tabata-torcher.jpg"
+    },
+    {
+      "code": "ST342",
+      "name": "Sculpt & Tone",
+      "image": "sculpt-and-tone-tn.jpg"
+    }
+  ]
+}

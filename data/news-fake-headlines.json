@@ -1,0 +1,34 @@
+{
+    "headlines": [
+      {
+        "headline": "Doctors are Amazed by a Simple Trick!",
+        "image": "doctors-hate-this-one-simple-trick.jpg",
+        "story": "In a surprising turn of events, medical professionals express astonishment at a simple health trick revealed by a local wellness company. The trick involves unconventional practices that have left doctors both intrigued and skeptical."
+      },
+      {
+        "headline": "Gym Closed Indefinitely!",
+        "image": "gym-closed.png",
+        "story": "Gyms everywhere are being forced to close its doors indefinitely. After the fall of Covid-19, Gyms everywhere hoped to rebuild: they haven't. Fitness enthusiasts are encouraged to explore alternative workout options until further notice."
+      },
+      {
+        "headline": "Herbal Tea Revolution!",
+        "image": "herbal-tea.jpg",
+        "story": "A new herbal tea is taking the wellness world by storm, claiming to have incredible health benefits. Enthusiasts are raving about its soothing effects and potential to enhance overall well-being."
+      },
+      {
+        "headline": "Scientists Uncover a New Muscle!",
+        "image": "new-muscle-discovered.png",
+        "story": "Researchers announce a groundbreaking discovery of a previously unknown muscle in the human body. Fitness enthusiasts are eager to learn how this muscle can be targeted for optimal strength and fitness gains."
+      },
+      {
+        "headline": "Unbelievable Workout Method!",
+        "image": "no-way-this-works.jpg",
+        "story": "New studies claim that instead of daily workouts at the gym, merely thinking about exercise can reduce body fat by 20%! Experts claim this simple trick drastically improves health. One consultant added 'And it's a lot easier too!'"
+      },
+      {
+        "headline": "Controversy Surrounding Steroid Use!",
+        "image": "steroids-kill.jpg",
+        "story": "Recent controversies surround the use of steroids in the fitness industry. Experts warn about the potential dangers and health risks associated with steroid use, urging fitness enthusiasts to prioritize natural and safe training methods."
+    }]
+  }
+  

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../static/styles/base.css">
+    <link rel="stylesheet" href="../static/styles/settings.css">
+    <script src="../static/script/settings.js" defer></script>
+ 
+  {% include 'includes/bootstrap.html' %}
+</head>
+<body>
+  {% include 'includes/header.html' %}
+
+<div class="container-fluid">
+    <div class="left-column">
+        <button class="button" onclick="showAccountPreferences()">Account Preferences</button>
+        <button class="button" onclick="showSignInSecurity()">Sign in & Security</button>
+        <button class="button" onclick="showVisibility()">Visibility</button>
+    </div>
+    <div class="right-content" id="content">
+        <!-- Content based on the current selected button will be displayed here -->
+    </div>
+</div>
+
+</body>
+</html>

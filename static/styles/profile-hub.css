@@ -1,32 +1,45 @@
 
 main {
     padding: 20px 5% 50px 5%;
-    background-color: var(--pink-lavander);
+    background-color: var(--background-dark);
+}
+#profile-and-contact-container{
+  display: flex;
+  
 }
 
 #profile-container {
     display: flex;
     align-items: center;
     min-height: 200px;
+    background-color: var(--base-light-gray);
+    border-radius: 10px;
+    margin: 0 1vh 0 0;
+    padding: 1vh;
 }
 
 #profile-image-container img {
     width: 200px;
     border-radius: 50%;
-    border: solid 3px var(--melon);
+    border: solid 3px var(--background-dark-accent);
+  
 }
 
 #profile-description {
     flex: 1;
     padding: 0 20px;
     min-width: 25%;
+   
+  
 }
 
 #contact-adds-container {
     min-width: 50%;
-    height: 200px;
+    min-height: 200px;
     border: 1px solid var(--bg-light);
     border-radius: 10px;
+    background-color: var(--accent-green);
+    
 }
 
 #profile-hub-options-container {
@@ -34,7 +47,7 @@ main {
     justify-content: space-between;
 }
 
-.profile-hub-option-boxes {
+.profile-hub-option-boxes-about {
     aspect-ratio: 1;
     display: flex;
     align-items: center;
@@ -46,6 +59,35 @@ main {
     min-width: 150px;
     margin-top: 100px;
     border-radius: 5%;
+    background-color: var(--base-dark-cyan);
+}
+.profile-hub-option-boxes-following {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    border: 1px solid var(--bg-light);
+    min-height: 200px;
+    max-width: 30%;
+    min-width: 150px;
+    margin-top: 100px;
+    border-radius: 5%;
+    background-color: var(--base-turquiose);
+}
+.profile-hub-option-boxes-workout {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    border: 1px solid var(--bg-light);
+    min-height: 200px;
+    max-width: 30%;
+    min-width: 150px;
+    margin-top: 100px;
+    border-radius: 5%;
+    background-color: var(--base-light-turquiose);
 }
 
 h2 a {

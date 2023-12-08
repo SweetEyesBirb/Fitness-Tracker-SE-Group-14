@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dietary page</title>
-  <link rel="stylesheet" href="../static/styles/base.css">
-  <link rel="stylesheet" href="../static/styles/dietary.css">
-  {% include 'includes/bootstrap.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary Goals</title>
+    <link rel="stylesheet" href="../static/styles/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/dietary.css">
+    {% include 'includes/bootstrap.html' %}
 </head>
- 
-
 <body>
-  {% include 'includes/header.html' %}
-    <div class="large-box"></div>
-    <div class="small-box"></div>
-</body>
+    {% include 'includes/header.html' %}
+    <div id="dietary-headline-container">
+        <h1>Dietary Headline</h1>
 
+        <!-- Container for BMI Calculator and Nutritional Information -->
+        <div class="flex-container">
+            <!-- BMI Calculator Box -->
+            <div id="bmi-box" class="dietary-box">
+                <h2>BMI Calculator</h2>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter weight" required>
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter height" required>
+
+                <button onclick="calculateBMI()">Calculate BMI</button>
+
+                <div id="result"></div>
+            </div>
+            <!-- End of BMI Calculator Box -->
+
+            <!-- Nutritional Information Box -->
+            <div id="nutrition-box" class="dietary-box">
+                <h2>Nutritional Information</h2>
+                <p>Mediterranean Diet, known for its emphasis on whole foods and heart-healthy benefits. The Keto Diet, focusing on high-fat, low-carb intake for weight loss through ketosis, and the Paleo Diet, centered around ancestral eating with an emphasis on lean meats and plant-based foods, can also be highlighted. Vegetarian and vegan diets, promoting plant-based eating, and intermittent fasting, involving cycling between eating and fasting periods, are other options. The DASH Diet, designed to lower blood pressure, and the flexible Flexitarian Diet, offering a balanced approach with occasional meat consumption.</p>
+                <!-- Add more content and information as needed -->
+            </div>
+            <!-- End of Nutritional Information Box -->
+        </div>
+        <!-- End of Container for BMI Calculator and Nutritional Information -->
+
+        <!-- Calorie Goals Box -->
+        <div id="calorie-box" class="dietary-box">
+            <h2>Calorie Goals</h2>
+            <label for="calories">Daily Calorie Goal:</label>
+            <input type="number" id="calories" placeholder="Enter calorie goal" required>
+
+            <button onclick="setCalorieGoal()">Set Calorie Goal</button>
+
+            <div id="calorie-goal-result"></div>
+        </div>
+        <!-- End of Calorie Goals Box -->
+    </div>
+
+    <script src="/static/script/dietary.js"></script>
+
+    {% include 'includes/footer.html' %}
+</body>
 </html>

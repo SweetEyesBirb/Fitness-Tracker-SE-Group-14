@@ -2,16 +2,18 @@ async function fetchLiveStreamData() {
   try {
       const response = await fetch('/live-classes-data');
       const data = await response.json();
-      return data || { names: [], images: [] };
+      return data || { names: [], images: [], codes: [] };
   } catch (error) {
       console.error('Error fetching live stream data:', error);
-      return { names: [], images: [] };
+      return { names: [], images: [], codes: []  };
   }
 }
 
-function createLiveStreamCard(name, image) {
-  const card = document.createElement("div");
+function createLiveStreamCard(name, image, code) {
+  const card = document.createElement("a");
+  card.style = "text-decoration: none; color: black;";
   card.className = "live-stream-card";
+  card.href = "/live-classes/live-class/" + code;
 
   const img = document.createElement("img");
   img.src = image ? `static/images/live-classes-thumbnails/${image}` : "path/to/default/image.jpg";
@@ -36,12 +38,12 @@ function shuffleArray(array) {
 
 async function populateLiveStreams(categoryId) {
   const categoryList = document.getElementById(categoryId);
-  const { names, images } = await fetchLiveStreamData();
-  const cardsData = names.map((name, index) => ({ name, image: images[index] }));
+  const { names, images, codes } = await fetchLiveStreamData();
+  const cardsData = names.map((name, index) => ({ name, image: images[index], code: codes[index] }));
   const shuffledCardsData = shuffleArray(cardsData);
   shuffledCardsData.forEach(data => {
       const li = document.createElement("li");
-      const card = createLiveStreamCard(data.name, data.image);
+      const card = createLiveStreamCard(data.name, data.image, data.code);
 
       li.appendChild(card);
       categoryList.appendChild(li);

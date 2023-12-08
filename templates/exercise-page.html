@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise Page</title>
+        <link rel="stylesheet" href="../static/styles/base.css">
+        <link rel="stylesheet" href="../static/styles/exercise.css">
+        <script src="../static/script/exercise.js" defer></script>
+
+    {% include 'includes/bootstrap.html' %}
+
+    </head>
+
+    <body>
+
+        {% include 'includes/header.html' %}
+
+        <div id="exercise-main">
+            <ul id="exercise-header">
+                <li id="search-bar"><input type="text"></li>
+                <li class="exercise-header-filter-options" id="time-filter">
+                    <select name="Time">
+                        <option value="45">45 Minutes</option>
+                        <option value="30">30 Minutes</option>
+                        <option value="15">15 Minutes</option>
+                    </select>
+                    </li>
+                <li class="exercise-header-filter-options" id="exercise-filter">
+                    <select name="Exercise">
+                        <option value="strength">Strength</option>
+                        <option value="aerobic">Aerobic</option>
+                        <option value="balance">Balance</option>
+                        <option value="stretching">Stretching</option>
+                    </select>
+                </li>
+                <li class="exercise-header-filter-options" id="intensity-filter">
+                    <select name="Intensity">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </li>
+            </ul>
+            <div id="exercise-main-card-container">
+
+            </div>
+        </div>
+
+        {% include 'includes/footer.html' %}
+
+    </body>
+</html>

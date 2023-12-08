@@ -1,3 +1,7 @@
+/* Google Font "Poppins" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap');
+
+
 /* variables */
 :root {
     --jet: #3A3238;
@@ -21,8 +25,11 @@
     --base-light-turquiose: #61c3ac;
     --base-turquiose: #94CDC6;
     --accent-green: #6ab37c;
+    --accent-dark-green: #397147;
     --text-light: aliceblue;
     --text-dark: #3A3238;
+    --base-light-gray: #696c72;
+    --anchor-text-dark: #000;
 
 }
 
@@ -33,7 +40,7 @@
     box-sizing: border-box;
     position: relative;
     text-align: center; 
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Garamond, Arial, sans-serif;
 }
 
 /* general */
@@ -46,9 +53,19 @@ main {
     min-height: 100vh;
 }
 
+section a {
+  text-decoration: none;
+  color: var(--anchor-text-dark);
+}
+
 a {
     text-decoration: none;
-    color: black;
+    color: var(--anchor-text-dark);
+}
+
+a > * {
+    text-decoration: none;
+    color: var(--anchor-text-dark);
 }
 
 li {
@@ -73,6 +90,8 @@ header {
 .bi-gear {
     font-size: 44px;
     margin: 0 20px;
+    color: var(--jet);
+}
 }
 
 .bi:hover {
@@ -97,7 +116,7 @@ header {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
     border-radius: 5px;
-    z-index: 1;
+    z-index: 100; /* please do not set back to 1 or the text in the pages will ovelap and cause the dropdown to close */
     right: 10px;
 }
 
@@ -134,4 +153,11 @@ footer {
 
 footer p {
 margin: 0 auto;
+}
+
+/* media queries */
+@media screen and (min-width: 768px) {
+  footer p {
+    font-size: 1.4rem;
+  }
 }

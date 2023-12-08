@@ -6,55 +6,26 @@ from flask import Flask, Response, jsonify, make_response, render_template, requ
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-'''
-# database example
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
-# Replace "your_database_name" with your desired database name
-db = SQLAlchemy(app)
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), nullable=False)
-    surname = db.Column(db.String(80), nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(80), nullable=False)
-    def __repr__(self):
-        return '<User %r>' % self.name
-db.create_all()
-print("Table 'User' created successfully!")
-'''
+
 
 def read_json_file(file_path):
-    with open(file_path, 'r') as file:
-        data = json.load(file)
-    return data
-
-
-conn = sqlite3.connect('database.db')
-cursor = conn.cursor()
-
-# Create a table for storing user registration data
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS users (
-        userID INTEGER PRIMARY KEY,
-        name TEXT NOT NULL,
-        surname TEXT NOT NULL,
-        email TEXT NOT NULL,
-        password TEXT NOT NULL
-    )
-''')
-
-conn.commit()
-conn.close()
+  with open(file_path, 'r') as file:
+      data = json.load(file)
+  return data
 
 
 @app.route('/')
 def index():
   return render_template('index.html')
 
-
 @app.route('/index')
 def hub_urlfor():
   return render_template('index.html')
+  
+
+@app.route('/settings')
+def settings_urlfor():
+  return render_template('settings.html')
 
 
 @app.route('/login')
@@ -82,13 +53,46 @@ def get_live_classes():
   images = [
       entry.get("image", "") for entry in exercise_classes.get("classes", [])
   ]
+  codes = [
+      entry.get("code", "") for entry in exercise_classes.get("classes", [])
+  ]
 
-  return jsonify({"names": names, "images": images})
+  return jsonify({"names": names, "images": images, "codes": codes})
+
+
+@app.route('/live-classes/live-class/<unique_id>')
+def live_class_urlfor(unique_id):
+   return render_template('live-class.html', unique_id=unique_id)
+
+
+@app.route('/live-classes/live-class-data/<unique_id>')
+def live_class_data(unique_id):
+    classes_data = read_json_file("data/live-classes-fake.json")
+
+    selected_class = next((entry for entry in classes_data.get("classes", []) if entry.get("code") == unique_id), None)
+
+    if selected_class:
+        return jsonify({
+            "code": selected_class.get("code", ""),
+            "name": selected_class.get("name", ""),
+            "image": selected_class.get("image", ""),
+        })
+    else:
+        return jsonify({"error": "Class not found"}), 404
 
 
 @app.route('/news')
 def news_urlfor():
   return render_template('news.html')
+
+
+@app.route('/news-data', methods=['GET'])
+def get_news():
+  news_headlines = read_json_file("data/news-fake-headlines.json")
+
+  headlines = news_headlines.get("headlines", [])
+
+  return jsonify({"headlines": headlines})
 
 
 @app.route('/achievements')
@@ -98,12 +102,66 @@ def achievements_urlfor():
 
 @app.route('/diary_and_tracker')
 def diary_and_tracker_urlfor():
+  """
+  This function is a Flask route that
+  renders a template called 'diary-tracker.html' when the 
+  /diary_and_tracker' URL is accessed.
+  :return: the rendered template 'diary-tracker.html'.
+  """
   return render_template('diary-tracker.html')
 
 
 @app.route('/exercise')
 def exercise_urlfor():
   return render_template('exercise-page.html')
+
+
+@app.route('/exercise-data', methods=['GET'])
+def get_exercise_data():
+    exercise_data = read_json_file("data/fake-exercises.json")
+
+    codes = [entry.get("code", "") for entry in exercise_data.get("exerciseData", [])]
+    names = [entry.get("name", "") for entry in exercise_data.get("exerciseData", [])]
+    images = [entry.get("image", "") for entry in exercise_data.get("exerciseData", [])]
+    intensities = [entry.get("intensity", "") for entry in exercise_data.get("exerciseData", [])]
+    durations = [entry.get("duration", 0) for entry in exercise_data.get("exerciseData", [])]
+    descriptions = [entry.get("description", "") for entry in exercise_data.get("exerciseData", [])]
+    categories = [entry.get("exercise", "") for entry in exercise_data.get("exerciseData", [])]
+
+    return jsonify({
+        "codes": codes,
+        "names": names,
+        "images": images,
+        "intensities": intensities,
+        "durations": durations,
+        "descriptions": descriptions,
+        "categories": categories
+    })
+
+
+@app.route('/exercise/exercise-specific/<unique_id>')
+def exercise_specific_urlfor(unique_id):
+   return render_template('exercise-specific.html', unique_id=unique_id)
+
+
+@app.route('/exercise/exercise-specific-data/<unique_id>')
+def exercise_specific_data(unique_id):
+    exercise_data = read_json_file("data/fake-exercises.json")
+
+    selected_exercise = next((entry for entry in exercise_data.get("exerciseData", []) if entry.get("code") == unique_id), None)
+
+    if selected_exercise:
+        return jsonify({
+            "code": selected_exercise.get("code", ""),
+            "name": selected_exercise.get("name", ""),
+            "image": selected_exercise.get("image", ""),
+            "intensity": selected_exercise.get("intensity", ""),
+            "duration": selected_exercise.get("duration", 0),
+            "description": selected_exercise.get("description", ""),
+            "exercise": selected_exercise.get("exercise", "")
+        })
+    else:
+        return jsonify({"error": "Exercise not found"}), 404
 
 
 @app.route('/dietary')
@@ -116,39 +174,6 @@ def registration():
   return render_template('registration.html')
 
 
-@app.route('/registration', methods=['POST'])
-def register():
-  #registration_success = False
-
-  if request.method == 'POST':
-    name = request.form['name']
-    surname = request.form['surname']
-    email = request.form['email']
-    password = request.form['password']
-
-    # Insert the data into the SQLite database
-    conn = sqlite3.connect('database.db')
-    cursor = conn.cursor()
-    cursor.execute(
-        '''INSERT INTO users (
-        name, surname, email, password) VALUES (?, ?, ?, ?)''',
-        (name, surname, email, password))
-    conn.commit()
-    conn.close()
-
-    #registration_success = True
-    response_html = render_template('registration-confirmation.html',
-                                    name=name,
-                                    surname=surname,
-                                    email=email)
-    return Response(response_html, status=200, mimetype='text/html')
-    '''return render_template('registration.html',
-                               registration_success=registration_success, 
-                               ser_name=request.form.get('name'),
-                               user_surname=request.form.get('surname'),
-                               user_email=request.form.get('email'))'''
-
-
 @app.route('/registration-confirmation')
 def registration_confirmation():
   return render_template('registration-confirmation.html')
@@ -157,74 +182,117 @@ def registration_confirmation():
 # POSTS EXERCISE TRACKER DATA TO THE DB
 @app.route('/submit_exercises_data', methods=['POST'])
 def submit_exercise():
-    data = request.json
+  """
+  This function receives exercise data, generates a unique ID for the entry,
+  reads existing data from a JSON file, appends the new exercise data
+  to the array, and writes the updated array back to the JSON file.
+  :return: a JSON response with a message indicating that the data
+  has been submitted and stored successfully.
+  """
+  
+  data = request.json
 
-    # Generate a unique ID for the new exercise entry
-    data['id'] = str(uuid.uuid4())
+  # Generates a unique ID for the new exercise entry
+  data['id'] = str(uuid.uuid4())
 
-    # Read existing data from the JSON file
-    with open('data/tracked-exercises.json', 'r') as file:
-        existing_data = json.load(file)
+  # Reads data from the JSON file
+  with open('data/tracked-exercises.json', 'r') as file:
+    existing_data = json.load(file)
 
-    # Append the new exercise data to the existing array
-    existing_data.append(data)
+  # Appends the new exercise data to the JSON array
+  existing_data.append(data)
 
-    # Write the updated array back to the JSON file
-    with open('data/tracked-exercises.json', 'w') as file:
-        json.dump(existing_data, file)
+  # Writes the updated array back to the JSON file
+  with open('data/tracked-exercises.json', 'w') as file:
+    json.dump(existing_data, file)
 
-    return jsonify({'message': 'Data submitted and stored successfully'})
+  return jsonify({'message': 'Data submitted and stored successfully'})
 
 
-# DELETE AN EXERCISE ENTRY FROM tracked-exercises.json VIA diary_and_tracker.html 
+# DELETE AN EXERCISE ENTRY FROM tracked-exercises.json VIA diary_and_tracker.html
 @app.route('/delete_exercise_entry/<string:entry_id>', methods=['DELETE'])
 def delete_exercise_entry(entry_id):
+  """
+  The function deletes an exercise entry from the 'tracked-exercises.json'
+  file based on the provided entry_id and returns
+  a JSON response indicating the success of the deletion.
+
+  :param entry_id: The entry_id parameter is the unique identifier
+  of the exercise entry that you want
+  to delete from the tracked-exercises.json file
+  :return: a JSON response with a message indicating that 
+  the exercise entry has been deleted successfully.
+  """
+  
   global exercise_data
-  exercise_data = [entry for entry in exercise_data if 'id' in entry and entry['id'] 
-                   != entry_id]
+  exercise_data = [
+      entry for entry in exercise_data
+      if 'id' in entry and entry['id'] != entry_id
+  ]
   with open('data/tracked-exercises.json', 'w') as file:
     json.dump(exercise_data, file)
-    
-  return jsonify({'message': 'Exercise entry deleted successfully'})
 
+  return jsonify({'message': 'Exercise entry deleted successfully'})
 
 
 # GETS EXERCISE TRACKER DATA FROM THE DB
 @app.route('/get_exercises_data', methods=['GET'])
 def get_data():
-    # Read data from the JSON file
-    with open('data/tracked-exercises.json', 'r') as f:
-        global exercise_data 
-        exercise_data = json.load(f)
-        return jsonify(exercise_data)
+  """
+  This function retrieves exercise tracker data from a JSON file and
+  returns it as a JSON response.
+  :return: the exercise_data variable as a JSON response.
+  """
+
+  with open('data/tracked-exercises.json', 'r') as f:
+    global exercise_data
+    exercise_data = json.load(f)
+    return jsonify(exercise_data)
 
 
 # POST DIARY ENTRIES TO THE DB
 @app.route('/submit_diary_entries', methods=['POST'])
 def submit_diary_entries():
-    data = request.json
+  """
+  The function `submit_diary_entries` receives a POST request with JSON data,
+  appends the data to an existing JSON file, and returns a success message.
+  :return: a JSON response with a message indicating that the data has been
+  submitted and stored successfully.
+  """
+  
+  data = request.json
 
-    # Generate a unique ID for the new diary entry
-    data['id'] = str(uuid.uuid4())
-  
-      # Read existing data from the JSON file
-    with open('data/diary-entries.json', 'r') as file:
-        existing_data = json.load(file)
-      # Append the new exercise data to the existing array
-    existing_data.append(data)
-  # Write the updated array back to the JSON file
-    with open('data/diary-entries.json', 'w') as file:
-        json.dump(existing_data, file)
-      # Return a success message
-    return jsonify({'message': 'Data submitted and stored successfully'})
-  
+  data['id'] = str(uuid.uuid4())
+
+  with open('data/diary-entries.json', 'r') as file:
+    existing_data = json.load(file)
+    
+  existing_data.append(data)
+
+  with open('data/diary-entries.json', 'w') as file:
+    json.dump(existing_data, file)
+    
+  return jsonify({'message': 'Data submitted and stored successfully'})
+
 
 # DELETE A DIARY ENTRY FROM diary-entries.json VIA diary_and_tracker.html
 @app.route('/delete_diary_entry/<string:entry_id>', methods=['DELETE'])
 def delete_diary_entry(entry_id):
+  """
+  The function deletes a diary entry with a specific ID from a list
+  of diary entries and updates the JSON file containing the entries.
+
+  :param entry_id: The `entry_id` parameter is a string that
+  represents the unique identifier of the diary entry that needs to be deleted
+  :return: a JSON response with a message indicating that the diary
+  entry was deleted successfully.
+  """
+  
   global diary_entries
-  diary_entries = [entry for entry in diary_entries if 'id' in entry and entry['id']
-                    != entry_id]
+  diary_entries = [
+      entry for entry in diary_entries
+      if 'id' in entry and entry['id'] != entry_id
+  ]
   with open('data/diary-entries.json', 'w') as file:
     json.dump(diary_entries, file)
   return jsonify({'message': 'Diary entry deleted successfully'})
@@ -233,13 +301,17 @@ def delete_diary_entry(entry_id):
 # GET DIARY ENTRIES FROM THE DB
 @app.route('/get_diary_entries', methods=['GET'])
 def get_diary_entries():
-  # Read data from the JSON file
+  """
+  The function `get_diary_entries` reads a JSON file containing
+  diary entries and returns them as a
+  JSON response.
+  :return: the contents of the 'diary-entries.json' file as a JSON object.
+  """
+
   with open('data/diary-entries.json', 'r') as f:
     global diary_entries
     diary_entries = json.load(f)
     return jsonify(diary_entries)
-
-
 
 
 # do not modify

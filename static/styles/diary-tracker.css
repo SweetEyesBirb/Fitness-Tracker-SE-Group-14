@@ -1,45 +1,79 @@
-
 main {
-    min-height: 100vh;
-    background-color: var(--citrine);
-    padding: 20px;
+  min-height: 100vh;
+  background-color: var(--background-dark);
+  padding: 20px;
 }
 
-#diary-exercise-main-container{
+#diary-exercise-main-container {
   display: flex;
+  border-radius: 10px;
   justify-content: space-between;
 }
 
+.diary-exercise-boxes {
+  color: var(--text-color);
+  background-color: var(--background-dark-light-accent);
+  margin: 20px auto;
+  width: 48%;
+  border-radius: 10px;
+  padding: 20px 10px;
+}
+
+/* titles of both boxes */
+.diary-exercise-boxes h2 {
+  border-bottom: solid;
+  margin-bottom: 1rem;
+}
+
+/* diary entries */
 #diary-entries {
-  padding: 10px;
+  /* background-color: var(--base-dark-cyan); */
+  /* border: solid; */
+  overflow-y: hidden;
+}
+
+/* each diary entry */
+.diary-entry-container {
+/*   display: flex; */
+  background-color: var(--base-dark-cyan);
+  margin: 0.5vh auto 2rem auto;
+  min-height: 2vh;
+/*   word-wrap: break-word; */
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.diary-entry-container p {
+  margin: 0 auto 1rem auto;
+  text-align: center;
 }
 
 #diary-entries p {
-  margin-top: 1rem;
+  margin: 1rem auto;
+  /* margin-right: 10px; */
 }
 
-/* .delete-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  color: red;
-} */
+#delete-button-diary {
+  /* margin-left: auto; */
+  margin-bottom: 1rem;
+  min-width: 100px;
+}
 
 .delete-button {
-  padding: 5px;
   border: none;
+  padding: 5px;
   border-radius: 5px;
-  background-color: var(--gray);
-  margin-bottom: 1rem;
+  background-color: var(--base-light-turquiose);
 }
 
-#exercise-container {
-    border-left: 1px solid var(--text-color);
-}
+
+/* exercise entries */
+/* #exercise-container {
+  border-left: 1px solid var(--text-color);
+} */
 
 #search-bar {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 #search-bar input {
@@ -48,7 +82,15 @@ main {
 }
 
 #exercise-container ul {
-    padding: 0;
+  padding: 0;
+}
+
+/* specific exercise entry */
+#exercise-list li {
+  background-color: var(--base-dark-cyan);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 #exercise-list li h3 {
@@ -59,41 +101,94 @@ main {
   line-height: 0.5rem;
 }
 
-.diary-exercise-boxes {
-    color: var(--text-color);
-    background-color: var(--jet);
-    margin: 20px auto;
-    width: 50%;
-    border-radius: 10px;
-    padding: 20px 10px;
-
+#exercise-list li button {
+  margin-bottom: 1rem;
 }
 
+
+/* Forms */
 .forms {
   border: 1px solid var(--jet);
+  border-radius: 5px;
   max-width: 600px;
   margin: 0 auto 2rem auto;
   padding: 20px;
 }
 
-/* diary form */
+.form-group {
+  margin: 1rem auto;
+}
+
+.form-group label, form h2 {
+  color: var(--text-light);
+}
+
+#diary-form label {
+  margin-bottom: 1rem;
+}
+
 #diary-entry {
   text-align: left;
 }
 
+.btn-submit {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  border: 1px solid var(--jet);
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding: 5px 10px;
+}
+
+.btn-submit:hover {
+  background-color: var(--base-light-turquiose);
+  transition: 1s;
+}
+
 /* media queries */
+
+@media screen and (min-width: 768px) {
+  .diary-exercise-boxes {
+     font-size: 1.3rem;
+      line-height: 2rem;
+  }
+
+  #exercise-list li p {
+    line-height: 1.5rem;
+  }
+
+  form {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
+
   #diary-exercise-main-container {
-        display: block;
+    display: block;
+  }
 
-    }
+  .diary-exercise-boxes {
+    margin: 20px auto;
+    width: 80%;
+  }
 
-    .diary-exercise-boxes {
-        margin: 20px auto;
-        width: 80%;
-    }
+/*   #exercise-container {
+    border: none;
+  } */
+}
 
-    #exercise-container {
-        border: none;
-    }
+
+@media screen and (max-width: 380px) {
+
+  .diary-entry-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #delete-button-diary {
+    margin: 0 auto 0.5rem auto;
+    min-width: 100px;
+  }
+  
 }

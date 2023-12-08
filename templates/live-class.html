@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Live Classes</title>
+    <link rel="stylesheet" href="../../static/styles/base.css">
+    <link rel="stylesheet" href="../../static/styles/live-class.css">
+    <script src="../../static/script/live-class.js" defer></script>
+
+  {% include 'includes/bootstrap.html' %}
+
+</head>
+
+<body>
+
+    {% include 'includes/header.html' %}
+
+    <main>
+      <div id="live-class-stream-and-chat-container">
+        <div id="live-class-stream-container">
+          <img id="image">
+          <div id="live-class-overlay">
+            <div id="live-class-overlay-top">
+              <p id="name"></p>
+              <p>Lorem Ipsum</p>
+            </div>
+            <div id="live-class-overlay-bottom">
+              <ul>
+                <li id="play-button"><img></li>
+                <li id="volume-slider"><img></li>
+                <li id="settings-cog"><img></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="live-class-chat-container">
+          <div id="live-class-chat">
+            <ul id="live-class-chat-ul">
+              
+            </ul>
+            <div id="live-class-chat-box">
+              <input type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="live-class-description-container">
+        <div id="live-class-description">
+          <p></p>
+        </div>
+      </div>
+    </main>
+  
+    {% include 'includes/footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+#exercise-main {
+    display: block;
+    height: fit-content;
+    background-color: var(--background-dark);
+    padding: 1vh;
+}
+
+#exercise-header {
+    display: flex;
+    height: 10vh;
+    background-color: var(--background-dark-light-accent);
+    list-style-type: none;
+    align-items: center;
+}
+
+#search-bar {
+    height: 4vh;
+    width: 70vw;
+    background-color: var(--base-light-turquiose);
+}
+
+#search-bar input {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+
+#exercise-header li {
+    margin-right: 3vh;
+}
+
+#exercise-header li select {
+    padding: 1vh;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: white;
+    color: var(--jet);
+}
+
+#exercise-header li select:hover {
+    background-color: white;
+}
+
+#exercise-header li select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.exercise-header-filter-options {
+    background-color: var(--background-dark-light-accent);
+}
+
+#exercise-main-card-container {
+    background-color: var(--base-light-turquiose);
+    height: 80vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    gap: 2vh;
+    white-space: normal;
+}
+
+.exercise-card {
+    display: flex;
+    background-color: var(--base-dark-cyan);
+    border-radius: 2vh;
+    margin: 2vh;
+    padding: 1vh;
+}
+
+.exercise-card-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.exercise-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2vh;
+}
+
+.exercise-card-info {
+    flex: 2;
+    padding: 0 2vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent-green);
+    border-radius: 2vh;
+    margin-left: 2vh;
+}
+
+.exercise-card-info-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+
+.exercise-card-info-boxes div {
+    width: 4vw;
+    height: 4vw;
+    background-color: red;
+    margin-right: 1vw;
+}
+
+.exercise-card-info-description {
+    font-size: 2vw;
+    line-height: 1.5;
+}

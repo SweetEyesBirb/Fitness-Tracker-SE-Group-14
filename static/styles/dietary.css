@@ -1,23 +1,64 @@
-.large-box {
-    width: 70%;
-    max-width: 6000px;
-    height: 140vh;
-    max-height: 6000px;
-    
-    
-    background-color: lightgray;
-    float: left;
-    box-sizing: border-box;
+#dietary-headline-container{
+  background-color: var(--background-dark);
+  height: auto;
+  padding: 1vh 0;
+  color: var(--text-light);
 }
 
-.small-box {
-    width: 30%;
-    max-width: 6000px;
-    height: 70vh;
-    max-height: 6000px;
-     
-    background-color: lightblue;
-    float: right;
-    
-    box-sizing: border-box;
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dietary-box {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: var(--base-dark-cyan);
+}
+
+#bmi-box {
+    margin-right: 0 auto;
+}
+
+/* styling for the BMI and calorie goals input fields */
+#bmi-box input, #calorie-box input {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;    
+}
+
+/* styling for the BMI and calorie box buttons */
+#bmi-box button, #calorie-box button {
+    background-color: var(--base-light-turquiose);
+    color: var(--background-dark);
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+#bmi-box button:hover, #calorie-box button:hover {
+    background-color: var(--base-turquiose);
+}
+
+
+/* media queries */
+@media screen and (max-width: 768px) {
+
+  .flex-container {
+    flex-direction: column;
+  }
+  
+}
+
+@media screen and (min-width: 1000px) {
+  
+  .dietary-box {
+    font-size: 1.5rem;
+  }
+  
 }

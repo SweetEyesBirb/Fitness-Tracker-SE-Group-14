@@ -2,9 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  padding: 2rem;
 }
 .grid-item {
-  background-color: #f2f2f2;
+  background-color: var(--base-turquiose);
   padding: 20px;
   text-align: center;
 }
@@ -13,4 +14,7 @@
   background-color: #f5e699;
   padding: 20px;
   text-align: center;
+}
+main{
+  background-color: var(--background-dark);
 }
