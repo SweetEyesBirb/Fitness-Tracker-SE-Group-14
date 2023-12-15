@@ -1,3 +1,7 @@
+/**
+ * The function `pageLoadCards` fetches exercise data from the server and dynamically creates HTML
+ * elements to display the exercise information on a web page.
+ */
 async function pageLoadCards(){
   fetch('/exercise-data')
       .then(response => response.json())

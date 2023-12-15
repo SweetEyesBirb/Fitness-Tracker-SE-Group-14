@@ -1,4 +1,7 @@
-
+/**
+ * The main function is a JavaScript code that validates a signup form and prevents submission if any
+ * required fields are empty or if the email and password fields do not match.
+ */
 function main() {
 
         const form = document.getElementById("signup-form");

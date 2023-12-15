@@ -1,3 +1,7 @@
+main {
+  background-color: var(--background-dark);
+}
+
 #news-main {
     height: auto;
     padding: 6vh 0;
@@ -51,5 +55,16 @@
 
 #news-main-adverts{
     width: 28%;
-    background-color: var(--base-turquiose)
+    background-color: var(--base-turquiose);
+    background-image: url(../../static/images/news-images/sports-advert.jpg);
+    background-size: cover;
+    background-position: center;
 }
+
+
+/* @media screen and (max-width: 1100px) {
+    #news-main {
+        flex-direction: column;
+    }
+
+} */

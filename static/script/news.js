@@ -1,3 +1,9 @@
+/**
+ * The function fetches news data from a server endpoint and returns the headlines as an array, or an
+ * empty array if there is an error.
+ * @returns an array of headlines from the fetched news data. If there is an error during the fetch
+ * request or parsing the response, an empty array will be returned.
+ */
 async function fetchNewsData() {
     try {
         const response = await fetch('/news-data');
@@ -9,6 +15,11 @@ async function fetchNewsData() {
     }
 }
 
+
+/**
+ * The function `displayNewsHeadlines` fetches news data, creates HTML elements for each news headline,
+ * and appends them to a container element on the webpage.
+ */
 async function displayNewsHeadlines() {
     try {
         const newsData = await fetchNewsData();

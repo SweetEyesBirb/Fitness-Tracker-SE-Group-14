@@ -1,4 +1,7 @@
-
+/**
+ * The function `updateToURLCode` fetches exercise-specific data from a URL and updates the
+ * corresponding elements on the webpage with the fetched data.
+ */
 async function updateToURLCode(){
     const urlParams = new URL(window.location.href);
     const uniqueCode = urlParams.pathname.split('/').pop();

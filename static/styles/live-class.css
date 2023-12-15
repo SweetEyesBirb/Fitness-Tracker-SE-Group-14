@@ -16,7 +16,7 @@ main {
 #live-class-stream-container,
 #live-class-chat-container {
     flex: 1;
-    background-color: grey;
+    background-color: var(--background-dark);
 }
 
 #live-class-stream-container {
@@ -39,7 +39,7 @@ main {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: var(--base-light-gray);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,12 +67,17 @@ main {
 
 #live-class-overlay-top p {
     font-size: 2rem;
+    color: var(--text-light);
 }
 
 #live-class-overlay-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#live-class-overlay-bottom ul li {
+    float: left;
 }
 
 #name {
@@ -85,7 +90,7 @@ main {
     flex-direction: column;
     padding: 2vh;
     box-sizing: border-box;
-    background-color: black;
+    background-color: var(--background-dark-light-accent);
 }
 
 #live-class-chat {
@@ -100,23 +105,29 @@ main {
     height: 100%;
 }
 
+#live-class-chat-ul li {
+  color: var(--text-light)
+}
+
 #live-class-chat-box {
     margin-top: auto;
 }
 
 #live-class-chat-box input {
-    width: 80%;
+    width: 100%;
     padding: 1vh;
     box-sizing: border-box;
+    text-align: left;
 }
 
 #live-class-description-container {
     padding: 20px;
     box-sizing: border-box;
+    background-color: var(--base-light-grey)
 }
 
 #live-class-description {
-    background-color: #f0f0f0;
+    background-color: var(--base-turquiose);
     padding: 20px;
     box-sizing: border-box;
 }
